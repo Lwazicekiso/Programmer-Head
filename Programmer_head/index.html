@@ -5,152 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programmer Head Home Page</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script type="module" src="index.js" defer></script> 
-        
-    <style>
-        /* Reset styles */
-        body, h1, h2, p, ul {
-            margin: 0;
-            padding: 0;
-        }
+     <link rel="stylesheet" href="index.css">
 
-        /* Base styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0; /* remove default margin */
-            min-height: 100vh; /* Ensure a minimum height for the body */
-            display: flex;
-            flex-direction: column; /* flex container to push the footer down */
-            background-color: #333;
-
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-        }
-
-        .First_Sight {
-            background-image: url('images/new_home_page.jpg');
-            font-weight:200;
-            background-size: cover;
-            color: #fff;
-            text-align: center;
-            padding: 150px;
-            padding-bottom: 100px;
-        }
-
-        .First_Sight h1 {
-            font-size: 36px;
-            margin-bottom: 80px;
-        }
-
-        .First_Sight p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-
-        .about {
-            color: goldenrod;
-            background-color: #fff;
-            text-align: center;
-            padding: 180px 0;
-            width: fit-content;
-            padding-top: -120px;
-        }
-
-        .about h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-
-        .about p {
-            width: 50%;
-            margin: 0 auto;
-        }
-
-        footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    flex-shrink: 0; /* Prevent footer from shrinking */
-}
-
-        /* Navigation styles */
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            background-color: #333;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            z-index: 2; /* Ensure it's above other content */
-        }
-        nav ul li {
-            margin: 0;
-        }
-
-        nav li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        nav ul li a:hover {
-            background-color: goldenrod;
-            color: #f0f0f0;
-        }
-
-        /* Content styles */
-        * {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            box-sizing: border-box;
-        }
-
-        /* Media queries for responsiveness */
-        @media screen and (max-width: 1200px) {
-            .First_Sight {
-                padding: 80px 0;
-            }
-
-            .First_Sight h1 {
-                font-size: 24px;
-            }
-
-            .First_Sight p {
-                color: black;
-                font-size: 16px;
-                margin-bottom: 20px;
-            }
-
-            .about {
-                padding: 50px 0;
-            }
-
-            .about h2 {
-                font-size: 24px;
-            }
-
-            .about p {
-                max-width: 80%;
-                margin: 0 auto;
-            }
-        }
-
-    </style>
+     <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+    <script>
+        // Initialize the FirebaseUI Widget using Firebase.
+    </script>
+    
 </head>
 <body>
+
     <header>
         <nav>
             <ul>
@@ -159,6 +24,7 @@
                 <li><a href="careers_paths.html">Career Paths</a></li>
                 <li><a href="Roadmaps.html">Roadmap</a></li>
                 <li><a href="Learning_resources.html">Learning Resources</a></li>
+                <li><a href='sign_up.html'>Sign Up</a></li>
             </ul>
         </nav>
     </header>
@@ -186,5 +52,8 @@
             <li>Contact us @ kemiicekiso@gmail.com|0737892588</li>
         </ul>
     </footer>
+    <div id="firebaseui-auth-container"></div>
+    <script type="module" src="script.js" defer></script>
+
 </body>
 </html
