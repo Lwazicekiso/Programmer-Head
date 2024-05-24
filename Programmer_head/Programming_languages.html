@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="page_styling.css">
     <link rel="stylesheet" href="Styling_for_pages.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.read-button'); // Note the change
+
+    buttons.forEach(button => {
+        let done = false;// Move 'done' declaration inside the loop
+  
+        button.addEventListener('click', () => {
+        console.log('Button clicked');
+  
+        if (!done) { // Simplified the condition
+            button.textContent = 'Done';
+            button.style.backgroundColor = 'green';
+          done = true;
+        } else {
+            button.textContent = 'Mark as done';
+            button.style.backgroundColor = 'red';
+          done = false;
+        }
+      });
+    });
+  });
+    </script>
     
 </head>
 
@@ -115,12 +138,12 @@
                                     <li>COBOL</li>
                                 </ul>
                             </div>
-                                
+                                <button class="read-button" >Mark Done</butto>
                     </section>
                     
                    <section>
                     <H2 id="OOP">Object Oriented Programming</H2>
-                            <img src="images/images_for_programming_lang/object-oriented-programming.png" alt="Image displaying some principles  of Objec object-oriented-programming">
+                            <section src="images/images_for_programming_lang/object-oriented-programming.png" alt="Image displaying some principles  of Objec object-oriented-programming">
                             <p>
                                 Now, let's shift gears to the captivating world of <abbr title="Object Oriented Programming" >OOP</abbr>! Brace yourselves for a programming paradigm that's nothing short of revolutionary.
                 
@@ -177,6 +200,7 @@
                                     <li>C#</li>
                                 </ul>
                         </div>
+                        
                    </section>
                         <section id="Functional_Programming">
                             <h2>Functional Programming</h2>
@@ -220,6 +244,8 @@
                                     <li>Scala</li>
                                     <li>Clojure</li>
                                 </ul>
+                                <button class="read-button" >Mark Done</butto>
+
                             </section>
                     <section  id="Scripitng_Languages">
                         <h2>Scripting Languages</h2> 
@@ -259,6 +285,8 @@
                              <li>JavaScript</li>
                              <li>Pearl</li>
                          </ul>
+                         <button class="read-button" >Mark Done</butto>
+
                     </section>
                     
                     
@@ -304,6 +332,8 @@
                                 <li>Datalog</li>
                                 <li>Mercury</li>
                             </ul>
+                            <button class="read-button" >Mark Done</butto>
+
                     </section>
         
                 </main>

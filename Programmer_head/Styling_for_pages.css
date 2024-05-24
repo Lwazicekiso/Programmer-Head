@@ -105,3 +105,10 @@ aside ol li:hover {
 
 /* Navigation styles */
 
+.read-button { /* Default state */
+  background-color: red;
+}
+
+.read-button.read { /* Read state */
+  background-color: green;
+}
