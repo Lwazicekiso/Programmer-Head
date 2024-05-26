@@ -1,24 +1,32 @@
 // Initialize Firebase
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js';
+import { getAuth, EmailAuthProvider } from 'https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js';
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js";
 
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// Load FirebaseUI AFTER Firebase initializatsion
+let firebaseui;
+const loadFirebaseUI = async () => {
+  try {
+    // Dynamically import FirebaseUI
+    firebaseui = await import('https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js');
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyD-LRB7hlcwQ6w2OIXJTFN9EHagADyEMG4",
-  authDomain: "programmer-head.firebaseapp.com",
-  projectId: "programmer-head",
-  storageBucket: "programmer-head.appspot.com",
-  messagingSenderId: "388294319217",
-  appId: "1:388294319217:web:1bc2e88a9823308db70fd0",
-  measurementId: "G-PP3LQ73Y3Y"
+    // Now initialize FirebaseUI
+    initFirebaseAuth();
+  } catch (error) {
+    console.error("Error loading FirebaseUI:", error);
+  }
 };
 
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY, // Update this variable with your environment variable.
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+};
 
 // Initialize Firebase app FIRST
 const app = initializeApp(firebaseConfig);
@@ -27,4 +35,21 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const firestore = getFirestore();
 
+// FirebaseUI configuration (same as before)
+const uiConfig = {
+  signInSuccessUrl: "/", 
+  signInOptions: [
+    EmailAuthProvider.PROVIDER_ID, 
+  ],
+  tosUrl: "<your-terms-of-service-url>",
+  privacyPolicyUrl: "<your-privacy-policy-url>",
+};
 
+// Function to initialize FirebaseUI AFTER Firebase is loaded
+async function initFirebaseAuth() {
+  const ui = new firebaseui.auth.AuthUI(auth);
+  ui.start("#firebaseui-auth-container", uiConfig);
+}
+
+// Load FirebaseUI after Firebase is ready
+loadFirebaseUI();
