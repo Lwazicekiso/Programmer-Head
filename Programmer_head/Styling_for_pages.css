@@ -1,114 +1,155 @@
-/* navigation bar styling*/
 nav ul {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 2; /* Ensure it's above other content */
-}
-
-nav ul li {
-  margin: 0;
-}
-
-nav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  background-color: goldenrod;
-}
-
-/* Content styles */
-* {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  box-sizing: border-box;
-}
-
-/*page_styling*/
-body {
-  background-color: rgb(100, 100, 100);
-  color: white;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-}
-
-main {
-  margin-left: 255px; /* Adjust for sidebar width*/
-  padding-left: 2%;
-  padding-right: 2%;
-}
-
-header {
-  margin-top: 5%;
-  margin-left: 255px; /* Adjust for sidebar width*/
-  padding-left: 2%;
-  padding-right: 2%;
-}
-
-img[src="images/images_for_careers/Data_Science.jpg"] {
+   display: flex;
+   justify-content: center;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   background-color: #333;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   width: 100%;
+   z-index: 2; /* Ensure it's above other content */
+  }
+  
+  nav ul li {
+   margin: 0;
+  }
+  
+  nav li a {
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+   background-color: goldenrod;
+  }
+  
+  /* Content styles */
+  * {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   box-sizing: border-box;
+  }
+  
+  /*page_styling*/
+  body {
+   background-color: rgb(100, 100, 100);
+   color: white;
+   line-height: 1.5;
+   margin: 0;
+   padding: 0;
+  }
+  
+  main {
+   margin-left: 255px; /* Adjust for sidebar width*/
+   padding-left: 2%;
+   padding-right: 2%;
+  }
+  
+  header {margin-top: 5%;
+   margin-left: 255px; /* Adjust for sidebar width*/
+   padding-left: 2%;
+   padding-right: 2%;
+  }
+  
+  img[src="images/images_for_careers/Data_Science.jpg"] {
   width: 100%; /* Make the image responsive */
-}
-/* Side bar */
-/* Sidebar styles */
-aside {
+  }
+  /* Side bar */
+  /* Sidebar styles */
+  aside {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
+ flex-direction: column; /* Stack items vertically */
   justify-content: flex-start; /* Align items to the top */
   padding: 0;
-  position: fixed;
+   position: fixed;
   font-size: 16px;
   top: 55px;
   left: 0;
-  width: 255px;
-  height: 100%;
-  overflow-y: scroll;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ width: 255px;
+   height: 100%;
+ overflow-y: scroll;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   color: rgb(128, 84, 63);
   z-index: 1; /* Ensure it's above other content */
-}
-
-/* Style the list inside the aside */
-aside ol {
-  padding: 0%;
+  }
+  
+  /* Style the list inside the aside */
+  aside ol {
+ padding: 0%;
   margin: 0%;
-}
-/* Style list items */
-aside ol li {
+  }
+  /* Style list items */
+  aside ol li {
   padding: 40px;
   font-size: 14px;
-  margin-bottom: 10px;
-}
-
-aside ol li a {
+   margin-bottom: 10px;
+  }
+  
+  aside ol li a {
   text-decoration: none;
   color: rgb(128, 84, 63);
-}
-
-aside ol li:hover {
-  background-color: goldenrod;
+  }
+  
+  aside ol li:hover {
+ background-color: goldenrod;
   color: white;
+  }
+  
+  /* Navigation styles */
+  
+  .read-button { /* Default state */
+ background-color: red;
+  }
+  
+  .read-button.read { /* Read state */
+   background-color: green;
+  }
+  
+  .content-to-toggle {
+  display: none; /* Hide the content initially */
+  }
+  
+  .content-to-toggle.active {
+  display: block; /* Show the content when the 'active' class is added */
+  }
+  section{
+   margin-left: -34px; /* Adjust for sidebar width*/
+  padding-left: 2%;
+   padding-right: 2%;
+  }
+
+  .toggle-icon{
+      height:2%;
+      border-radius: 50%;
+  }
+
+  .toggler-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+    margin: 0 30px 0 0;  /* Shortened margin declaration */
+    padding: 0;          /* Reset button padding */
+    display: flex;      /* Align icon within button */
+    justify-content: center;
+    align-items: center;
 }
 
-/* Navigation styles */
-
-.read-button { /* Default state */
-  background-color: red;
+.toggler-button:hover {
+    background-color: goldenrod;
+    color: white;
 }
 
-.read-button.read { /* Read state */
-  background-color: green;
+.toggle-icon {
+    width: 100%;   /* Make icon fill the entire button */
+    height: 100%;  
+    object-fit: contain; /* Maintain aspect ratio and prevent distortion */
 }
+      
