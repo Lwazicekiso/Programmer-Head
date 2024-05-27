@@ -13,13 +13,14 @@
 <body>
    
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Programming_languages.html">Programming </a></li>
-                <li><a href="careers_paths.html">Career Paths</a></li>
-                <li> <a href="Roadmaps.html">Roadmap</a></li>
-                <li> <a href="Learning_resources.html">Learning Resources</a></li>
-            </ul>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Programming_languages.html">Programming </a></li>
+            <li><a href="careers_paths.html">Career Paths</a></li>
+            <li><a href="Roadmaps.html">Roadmap</a></li>
+            <li><a href="Learning_resources.html">Learning Resources</a></li>
+            <li><a href='sign_up.html'>Sign Up</a></li>
+        </ul>
         </nav>
  
     <aside id="sidebar">
@@ -47,8 +48,15 @@
   <main>
       <section id="software_dev">
         
-        <h2 >Software Developer/Engineer:</h2>
-        <img src="images/images_for_learning_resources/SoftWare.png">
+        <div class="section-header">  
+
+          <h2 >Software Developer/Engineer:</h2>
+          <button class='toggler-button'>
+              <img alt="Expand/Collapse" class="toggle-icon" src="images/icons/Down_arrow_icon.svg"/> 
+          </button>
+          </div>
+          <div class='content-to-toggle'>
+            <img src="images/images_for_learning_resources/SoftWare.png">
           <ol>
             <li><a href="https://www.codecademy.com/">Codecademy</a>: Codecademy offers free courses on multiple programming languages, making it a great starting point for beginners.</li>
             <li> <a href="https://www.coursera.org/">Coursera</a provides free access to courses from top universities, offering a more structured approach to learning programming and computer science.</li>
@@ -62,10 +70,20 @@
             <li><a href="https://www.khanacademy.org/">Khan Academy</a>: Khan Academy offers interactive coding lessons and algorithms courses, making it suitable for both beginners and intermediate-level learners.</li>
             <li><a href="https://www.sololearn.com/">Solo Learn</a>: Solo Learn provides a variety of programming courses and challenges that can be accessed through a mobile app, making it convenient for on-the-go learning.</li>
           </ol>
+          <button class="read-button" >Mark Done</button>
+          </div>
+
   
       </section>
       <section id="web_dev">
-        <h2>Web Development/Full-Stack Developer (in addition to the above):</h2>
+        <div class="section-header">  
+
+          <h2 id="webdev">Web Development/ Full-Stack Developer</h2>
+          <button class='toggler-button'>
+              <img alt="Expand/Collapse" class="toggle-icon" src="images/icons/Down_arrow_icon.svg"/> 
+          </button>
+          </div>
+          <div class='content-to-toggle'>
         <img src="images/images_for_learning_resources/WebDev.png">
           <ol>
           
@@ -77,24 +95,43 @@
             <li><a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap</a>: Bootstrap's documentation is a great resource for learning responsive web design using the Bootstrap framework.</li>
             <li><a href="https://vuejs.org/">Vue.js</a>: Vue.js offers official documentation for learning the Vue.js JavaScript framework, commonly used in front-end development.</li>
             <li><a href="https://reactjs.org/docs/getting-started.html">React Official Documentation</a>: The official documentation for React.js is essential for learning React, another popular front-end library/framework.</li>
-          
+
           </ol>
+          <button class="read-button" >Mark Done</butto>
+
+          </div>
       </section>
   
       <section id="mobile_app_dev">
-        <h2>Mobile App Developer (in addition to the above):</h2>
-        <img src="images/images_for_learning_resources/Mobile_App_dev.png">
+        <div class="section-header">  
+          <h2>Mobile App Developer:</h2>
+          <button class='toggler-button'>
+              <img alt="Expand/Collapse" class="toggle-icon" src="images/icons/Down_arrow_icon.svg"/> 
+          </button>
+      </div>  
+
+          <div class='content-to-toggle'>
+
+          <img src="images/images_for_learning_resources/Mobile_App_dev.png">
           <ol>
             <li><a href="https://developer.android.com/docs/">Android Developer Documentation</a>: Google's Android Developer Documentation provides comprehensive resources for Android app development, including guides and APIs.</li>
             <li><a href="https://developer.apple.com/tutorials/app-dev-training">iOS Developer Documentation</a>: Apple's official documentation for iOS app development, offering guidance on Swift programming and iOS development.</li>
             <li><a href="https://www.youtube.com/@AndroidDevelopers/about">Google's Android Developer YouTube Channel</a>: This channel features video tutorials, tips, and updates related to Android app development.</li>
             <li><a href="https://www.apple.com/swift/playgrounds/">Swift Playgrounds</a>: Swift Playgrounds is an interactive app for learning Swift programming on an iPad, designed to make learning iOS development fun and engaging.</li>
           </ol>
-      
+          <button class="read-button" >Mark Done</button>
+          </div>
+
       </section>
   
       <section  id="Data_sci">
-        <h2>Data Science :</h2>
+        <div class="section-header">
+        <h2 >Data Scientist:</h2>
+        <button class='toggler-button'>
+            <img alt="Expand/Collapse" class="toggle-icon" src="images/icons/Down_arrow_icon.svg"/> 
+        </button>
+        </div>
+        <div class='content-to-toggle'>
         <img src="images/images_for_learning_resources/Data_science.png">
           <ol>
               <li><a href="https://www.kaggle.com/learn">Kaggle</a>: Kaggle offers datasets, competitions, and free courses on data science and machine learning, allowing you to apply your skills in real-world scenarios.</li>
@@ -103,12 +140,22 @@
               <li><a href="https://archive.ics.uci.edu/">UCI Machine Learning Repository</a>: UCI's Machine Learning Repository provides access to datasets for machine learning research and practice.</li>
               <li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a>: This free online book is a valuable resource for learning data science with Python, covering various data analysis and visualization techniques.</li>   
           </ol>
+          <button class="read-button" >Mark Done</butto>
+
       </section>
   
       <section id="MLE">
-        <h2>Machine Learning Engineer (in addition to the above):</h2>
-        <img src="images/images_for_learning_resources/Machine_Learning.png">
-          <ol>
+        <div class="section-header">  
+
+          <h2>Machine Learning Engineer(in addition to the above):</h2>
+          <button class='toggler-button'>
+              <img alt="Expand/Collapse" class="toggle-icon" src="images/icons/Down_arrow_icon.svg"/> 
+          </button>
+          </div>
+          <div class='content-to-toggle'>
+            <img src="images/images_for_learning_resources/Machine_Learning.png">
+         
+        <ol>
                 
             <li><a href="https://www.fast.ai/">fast.ai</a>: fast.ai offers free deep learning courses, focusing on practical applications and hands-on experience in deep learning.</li>
             <li><a href="https://developers.google.com/machine-learning/crash-course/">Google's Machine Learning Crash Course</a>: Google's course covers the fundamentals of machine learning, making it a good starting point for those new to the field.</li>
@@ -117,11 +164,22 @@
             <li><a href="https://www.coursera.org/specializations/deep-learning">Deep Learning Specialization on Coursera</a>: Coursera offers free access to deep learning courses as part of their Deep Learning Specialization, which covers various aspects of deep learning.</li>
             
           </ol>
+          <button class="read-button" >Mark Done</butto>
+
+          </div>
+            
       </section>
   
       <section id="DEVOPS">
-        <h2>DevOps Engineer:</h2>
-        <img src="images/images_for_learning_resources/Devops.png">        
+        <div class="section-header">  
+
+          <h2 id="DevOps">DevOps Engineer:</h2>
+          <button class='toggler-button'>
+              <img alt="Expand/Collapse" class="toggle-icon" src="images/icons/Down_arrow_icon.svg"/> 
+          </button>
+          </div>
+          <div class='content-to-toggle'>
+          <img src="images/images_for_learning_resources/Devops.png">        
         
           <ol>
             <li><a href="https://docs.docker.com/">Docker Documentation</a>: Docker's official documentation provides in-depth information on containerization, a crucial concept in DevOps.</li>
@@ -131,33 +189,63 @@
             <li><a href="https://docs.ansible.com/">Ansible Documentation</a>: Ansible is another automation tool, and its official documentation provides guidance on automating tasks and configurations.</li>
         
           </ol>
+          <button class="read-button" >Mark Done</butto>
+
+          </div>        
+          
+
       </section>
   
       <section id="DBA">
+
         <h2 >Database Administrator (DBA):</h2>
-        <img src="images/images_for_learning_resources/DBA.png" >
+        <div class='content-to-toggle'>
+          <img src="images/images_for_learning_resources/DBA.png" >
         <ol>
           <li><a href="https://sqlzoo.net/wiki/SQL_Tutorial">SQLZoo</a>: SQLZoo offers interactive SQL tutorials that can help you learn and practice SQL, a fundamental skill for DBAs.</li>
           <li><a href="https://www.sqlcourse.com/">SQLCourse</a>: SQLCourse provides free SQL tutorials and exercises for learning and mastering SQL queries and database management.</li>
           <li><a href="Microsoft Learn">Microsoft Learn - Azure SQL Database</a>: Microsoft's platform offers resources for learning Azure SQL Database, a cloud-based database service.</li>
           <li><a href="https://www.mysqltutorial.org/">MySQL Tutorial</a>: MySQL's official documentation and tutorials are essential for those working with the MySQL database system.</li>  
         </ol>
+        <button class="read-button" >Mark Done</butto>
+
+          </div>
+        
       </section>   
        
-  <section>
-    <h2 id="Gamedev">Game Developer :</h2>
-    <img src="images/images_for_learning_resources/gamedev.png" width="70%">
-    <ol>
+  <section id="Gamedev">
+    <div class="section-header">  
+
+      <h2 >Game Development</h2>
+      <button class='toggler-button'>
+                      <img alt="Expand/Collapse" class="toggle-icon" src="images/icons/Down_arrow_icon.svg"/> 
+                  </button>
+                  </div>
+    <div class='content-to-toggle'>
+      <img src="images/images_for_learning_resources/gamedev.png" width="70%">
+      <ol>
       <li><a href="https://learn.unity.com/">Unity Learn</a>: Unity Learn offers free tutorials and courses for Unity game development, covering game design, scripting, and more.</li>
       <li><a href="Godot Engine Documentation">Godot Engine Documentation</a>: The Godot Engine's official documentation is a valuable resource for those using this open-source game engine.</li>
       <li><a href="https://gamedev.net/">GameDev.net</a>: GameDev.net is a community and resource hub for game developers, offering articles, tutorials, and a supportive community.</li>
       <li><a href="https://docs.unrealengine.com/en-US/">Unreal Engine Documentation</a>: Unreal Engine's official documentation provides guidance for those working with this powerful game engine.</li>
     </ol>
+    <button class="read-button" >Mark Done</butto>
+
+    </div>
+    
   </section>
 
-  <section id="Embedded_systems_dev">
-    <h2>Embedded Systems Developer:</h2>
-    <img src="images/images_for_learning_resources/embedded_systems_dev.png">
+  <sectionid="Gamedev" id="Embedded_systems_dev">
+    <div class="section-header">  
+
+    <h2 id="Embedded_systems">Embedded Systems Developer:</h2>
+    <button class='toggler-button'>
+    <img alt="Expand/Collapse" class="toggle-icon" src="images/icons/Down_arrow_icon.svg"/> 
+    </button>
+    </div>
+    <sectionid="Gamedev" class='content-to-toggle'>
+
+    <sectionid="Gamedev" src="images/images_for_learning_resources/embedded_systems_dev.png"/>>
       <ol>
           <li><a href="https://www.embedded.com/">Embedded.com</a>: Embedded.com provides articles, tutorials, and resources for embedded systems developers, covering hardware and software aspects.</li>
           <li><A href="https://deepbluembedded.com/pic-programming-tutorials/">Microchip's PIC Microcontroller Tutorials</A>: Microchip offers tutorials for learning PIC microcontroller programming, a common platform in embedded systems.</li>
@@ -165,9 +253,15 @@
           <li><a href="https://www.st.com/content/st_com/en/support/learning/stm32-education.html">STMicroelectronics STM32 Tutorials</a>: STMicroelectronics offers official resources for learning about STM32 microcontrollers, widely used in embedded systems.</li>
       </ol> 
     <p>These comprehensive learning resources cater to various technology career paths, providing a wealth of knowledge and opportunities for skill development. Remember to explore these resources, practice regularly, and work on projects to gain practical experience in your chosen career path.</p>
-  </section>
-  </main>
+    <button class="read-button" >Mark Done</butto>
+    
 
-  </div>
+  </sectionid="Gamedev">
+  </sectionid="Gamedev">
+
+  </sectionid="Gamedev">
+  <script type="text/javascript" src='dynamic _script.js'>
+  </script>
+
 </body>
 </html>

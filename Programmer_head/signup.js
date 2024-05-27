@@ -4,8 +4,12 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
 
+const encodedApiKey = btoa("AIzaSyD-LRB7hlcwQ6w2OIXJTFN9EHagADyEMG4"); 
+// You'll get something like this: "QUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVowMTIzNDU2Nzg5MA=="
+
+// In your script.js
 const firebaseConfig = {
-        apiKey: "AIzaSyD-LRB7hlcwQ6w2OIXJTFN9EHagADyEMG4",
+  apiKey: atob(encodedApiKey), //add layer for security
         authDomain: "programmer-head.firebaseapp.com",
         projectId: "programmer-head",
         storageBucket: "programmer-head.appspot.com",
@@ -41,6 +45,7 @@ signupForm.addEventListener('submit', (event) => {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error('Error creating user:', errorCode, errorMessage);
+
       // Display error to the user
     });
 });

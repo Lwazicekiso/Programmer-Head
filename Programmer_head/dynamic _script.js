@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to toggle content and icon for each section
   function toggleSection(button) {
-      const contentToToggle = button.nextElementSibling;
-      if (!contentToToggle) return; // Exit if no content found
+    const contentToToggle = button.parentNode.nextElementSibling; 
+    if (!contentToToggle) return; // Exit if no content found
 
       // Toggle 'active' class on content and icon
       contentToToggle.classList.toggle('active');

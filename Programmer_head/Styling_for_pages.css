@@ -153,3 +153,12 @@ nav ul {
     object-fit: contain; /* Maintain aspect ratio and prevent distortion */
 }
       
+#MobileAppDev{
+    margin:-20px;
+    padding: -20px;
+    
+}
+.section-header {
+    display: flex;    /* Enable flexbox layout */
+    align-items: center; /* Vertically align items (heading and button) to the center */
+  }
