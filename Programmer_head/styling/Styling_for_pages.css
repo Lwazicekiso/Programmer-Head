@@ -104,24 +104,25 @@ nav ul {
   /* Navigation styles */
   .read-button {
     background-color: red;
+    color: white;
     padding: 1%;
     border-radius: 8%;
-    width: 10%;
-    border: none; /* Remove default border */
-    color: white; /* Ensure text is visible */
-    cursor: pointer; /* Indicate that it's clickable */
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    width: 10%; /* Or use a more specific width */
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Transition all properties for a smooth change */
   }
   
+  /* Read state */
   .read-button.read {
-    background-color: rgb(1, 212, 1); 
-    color: white;
+    background-color: rgb(1, 212, 1);
+    /* No need to repeat other properties here */
   }
   
-  /* Add hover effect to make it more interactive */
+  /* Hover effect */
   .read-button:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .content-to-toggle {

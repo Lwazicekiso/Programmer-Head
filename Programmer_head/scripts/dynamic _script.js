@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const readButtons = document.querySelectorAll('.read-button');
   const toggleButtons = document.querySelectorAll('.toggler-button');
 
-  // Function to handle read button clicks
+  //handle read button clicks
   function toggleReadStatus(button) {
       button.classList.toggle('read');
       button.textContent = button.classList.contains('read') ? 'Done' : 'Mark as done';
