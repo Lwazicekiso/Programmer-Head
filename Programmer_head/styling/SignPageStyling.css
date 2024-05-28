@@ -1,82 +1,84 @@
+/* signPageStyling.css */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Facebook font */
+  background-color: #f0f2f5; /* Facebook background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+/* Style the navigation bar */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333; /* Same background as other pages */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2; /* Ensure it's above other content */
+}
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Facebook font */
-      background-color: #f0f2f5; /* Facebook background color */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    nav ul {
-   display: flex;
-   justify-content: center;
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-   background-color: #333;
-   position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   width: 100%;
-   z-index: 2; /* Ensure it's above other content */
-  }
-  
-  nav ul li {
-   margin: 0;
-  }
-  
-  nav li a {
-   display: block;
-   color: white;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
-  }
-  
-  nav ul li a:hover {
-   background-color: goldenrod;
-  }
-  
-  /* Content styles */
-  * {
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-   box-sizing: border-box;
-  }
-  
+nav ul li {
+  margin: 0; /* Remove margin */
+}
 
-    #signup-form {
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      width: 300px; /* Adjust width as needed */
-    }
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px; /* Exact same padding */
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-    label {
-      display: block;
-      margin-bottom: 5px;
-      color: #1c1e21; /* Darker text color */
-    }
+nav ul li a:hover {
+  background-color: goldenrod; /* Exact same hover effect */
+}
 
-    input[type="text"],
-    input[type="password"],
-    input[type="email"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #dddfe2; /* Light gray border */
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
+/* Form Container Styling */
+#signup-form {
+  background-color: white;
+  padding: 30px; /* Increase padding for more breathing room */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Adjust width as needed */
+}
 
-    button[type="submit"] {
-      background-color: goldenrod; 
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-  
+/* Input Field Styling */
+label {
+  display: block;
+  margin-bottom: 8px; /* Increase margin below labels */
+  color: #1c1e21; /* Darker text color */
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: calc(100% - 22px);  /* Adjust for padding and border */
+  padding: 12px 10px;  /* Increase padding inside input fields */
+  margin-bottom: 15px;  /* Increase margin between input fields */
+  border: 1px solid #dddfe2;
+  border-radius: 5px; 
+  box-sizing: border-box;
+  font-size: 16px; /* Increase font size */
+}
+
+/* Button Styling */
+button[type="submit"] {
+  background-color: goldenrod; 
+  color: white;
+  padding: 12px 20px; /* Increase padding for larger buttons */
+  border: none;
+  border-radius: 6px; /* Slightly rounder corners */
+  cursor: pointer;
+  font-size: 17px; /* Increase font size */
+  font-weight: bold;
+  width: 100%; /* Make buttons take full width of container */
+  margin-bottom: 10px;
+}
