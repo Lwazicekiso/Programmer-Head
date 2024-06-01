@@ -2,7 +2,7 @@
 
 // Initialize Firebase
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, EmailAuthProvider } from 'https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js';
+import { getAuth,sendPasswordResetEmail , createUserWithEmailAndPassword, signInWithEmailAndPassword, EmailAuthProvider } from 'https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js';
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js";
 
 const encodedApiKey = btoa("AIzaSyD-LRB7hlcwQ6w2OIXJTFN9EHagADyEMG4"); 
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Sign in with email and password
       await signInWithEmailAndPassword(auth, email, password);
       alert("Welcome Back");
-      window.location.href = "././Programming_languages.html"; // redirect to home page (adjust this if needed)
+      window.location.href = "././Programming_languages.html"; 
     } catch (error) {
       // Enhanced error handling with specific error messages
       let errorMessage = "An error occurred."; // Default error message
@@ -97,3 +97,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   });
+
+  ///FORGOT PASSWORD HANDLER
+  const forgotPasswordForm = document.getElementById("forgot-password-form");
+    if(forgotPasswordForm){
+
+        forgotPasswordForm.addEventListener("submit", async (event) => {
+          event.preventDefault();
+        
+          const email = document.getElementById("email").value;
+        
+          try {
+            await sendPasswordResetEmail(auth, email);
+            alert("Password reset email sent!");
+            window.location.href = "index.html";
+
+          } catch (error) {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.error("Error sending password reset email:", errorCode, errorMessage);
+            alert("Error sending password reset email:", errorMessage);
+          }
+        });
+    }
