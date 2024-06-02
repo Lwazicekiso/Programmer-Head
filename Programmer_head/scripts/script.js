@@ -1,4 +1,5 @@
-import { auth } from './firebaseConfig.js'
+// script.js
+import { auth, uiConfig } from './firebaseConfig.js'
 
 // Load FirebaseUI AFTER Firebase initialization
 let firebaseui;
@@ -12,17 +13,6 @@ const loadFirebaseUI = async () => {
   } catch (error) {
     console.error("Error loading FirebaseUI:", error);
   }
-};
-
-// FirebaseUI configuration 
-const uiConfig = {
-  signInSuccessUrl: "/", 
-  signInOptions: [
-    firebase.auth.EmailAuthProvider.PROVIDER_ID, 
-  ],
-  tosUrl: "<your-terms-of-service-url>",
-  privacyPolicyUrl: "<your-privacy-policy-url>",
-  credentialHelper: firebaseui.auth.CredentialHelper.ACCOUNT_CHOOSER_COM, // Show account chooser if multiple accounts exist
 };
 
 // Function to initialize FirebaseUI AFTER Firebase is loaded

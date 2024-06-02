@@ -5,7 +5,7 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.1/firebas
 
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: atob(import.meta.env.VITE_ENCODED_API_KEY), // Decode your encoded key
+    apiKey: "AIzaSyD-LRB7hlcwQ6w2OIXJTFN9EHagADyEMG4",
     authDomain: "programmer-head.firebaseapp.com",
     projectId: "programmer-head",
     storageBucket: "programmer-head.appspot.com",
@@ -21,3 +21,4 @@ const app = initializeApp(firebaseConfig);
 // Get a reference to the auth instance
 export const auth = getAuth(app);
 export const firestore = getFirestore(app);
+export {firebaseConfig};

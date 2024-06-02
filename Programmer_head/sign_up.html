@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>Sign Up</title>
-  <script type="module" src="scripts/signup.js" defer></script> 
   <link rel='stylesheet' href="styling/SignPageStyling.css">
 </head>
 <body>
@@ -20,16 +19,20 @@
 </nav>
   <form id="signup-form">
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" placeholder="Enter Password"><br>
-
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" placeholder="Enter Email"><br>
 
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter Password"><br>
+
+
+
     <button type="submit">Create Profile</button>
     <button id='Sign_in' type="submit">Sign in</button>
-    <button id="sign_in_with_g">Sign in with google</button><br>
-    <a id='forg-pass' href="forgot_password.html">Forgot Password</a>
+    <button id="google-signin-button">Sign in with google</button>
+    <a href="forgot_password.html">Forgot Password</a>
   </form>
+  <script type="module" src="scripts/signup.js" defer></script> 
+
 </body>
 </html>
