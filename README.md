@@ -28,7 +28,7 @@ This project is a simple, yet informative blog website built using HTML, CSS, an
 
 1. **Clone the Repository:**
    ```bash
-   git clone [https://github.com/your-username/your-repository-name.git](https://github.com/your-username/your-repository-name.git)
+   git clone [https://github.com/your-username/your-repository-name.git](https://github.com/your-username/your-repository-name.git](https://github.com/Lwazicekiso/Programmer-Head.git)
 
 ## Run the Project:
 
@@ -38,7 +38,7 @@ Open index.html in your browser.
 Navigation: Use the navbar to explore sections.
 Toggle Content: Click the arrow buttons to expand/collapse sections.
 Mark as Read: Click "Marks as read" to track progress.
-Sign Up/Sign In: Create an account or log in usingh google account.
+Sign Up/Sign In: Create an account or log in using google account.
 Forgot Password: Use the provided link to reset your password.
 
 ##Future Enhancements
