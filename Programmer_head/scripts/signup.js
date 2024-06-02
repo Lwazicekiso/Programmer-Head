@@ -41,14 +41,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const signupForm = document.getElementById("signup-form");
     const signinButton = document.getElementById("Sign_in"); // Sign in button
     const googleSigninButton = document.getElementById("google-signin-button"); // Get reference to google button
-    const forgotPasswordButton = document.getElementById("forgotPassword");
   
     const errorDisplay = document.createElement("p");
     errorDisplay.id = "error-message";
-    signupForm.appendChild(errorDisplay);
+    //signupForm.appendChild(errorDisplay);
 
     // Sign-up form submission handler 
-    signupForm.addEventListener("submit", (event) => {
+    signupForm.addEventListener("submit", function(event){
       event.preventDefault(); // Prevent default form submission
 
       const email = document.getElementById("email").value;
@@ -139,29 +138,8 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Error signing in with Google:", errorMessage);
       }
   });
-  //FORGOT PASSWORD HANDLER
-  if (forgotPasswordButton) {
+
+  ///FORGOT PASSWORD HANDLER
   
-      forgotPasswordButton.addEventListener("click", async (event) => {
-        event.preventDefault();
-    
-        const email = document.getElementById("email").value;
-    
-        try {
-          await sendPasswordResetEmail(auth, email);
-          alert("Password reset email sent!");
-          window.location.href = "index.html";
-        } catch (error) {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.error(
-            "Error sending password reset email:",
-            errorCode,
-            errorMessage
-          );
-          errorDisplay.textContent = errorMessage; // Display error message to user
-        }
-      });
-    }
 
 });
